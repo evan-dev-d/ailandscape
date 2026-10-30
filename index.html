@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>AI 入门课：看懂 20 家 AI 公司与它们的智能体（2026 年 10 月）</title>
+<meta name="description" content="面向零基础读者的 AI 科普教程：用 4 个词入门，按主力模型智力水平看完 20 家国内外 AI 公司排行，直接找到能写代码、能做办公的智能体，并一键注册或下载。数据快照 2026 年 10 月。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="AI 入门课：看懂 20 家 AI 公司与它们的智能体">
+<meta property="og:description" content="4 个小节、约 10 分钟。给完全不懂 AI 的人的入门指南：基础概念、公司排行、工具选择、注册下载。数据快照 2026 年 10 月。">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f5f6fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080c15" media="(prefers-color-scheme: dark)">
+<!-- 绑定域名后，可加一行分享封面：<meta property="og:image" content="https://你的域名/og-cover.png"> -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6bff'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23f5f6fa'/%3E%3Cpath d='M20 42 L32 20 L44 42 Z' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='42' r='3.5' fill='url(%23g)'/%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   AI 全景图 2026 · 教程版
+   浅色默认 / 深色可切换；单文件；数据见文件末尾 DATA
+   ============================================================ */
+:root{
+  --bg:#f5f6fa;
+  --card:#ffffff;
+  --card-2:#f7f8fc;
+  --nav-bg:rgba(255,255,255,.86);
+  --ink:#0f172a;
+  --ink-2:#39445c;
+  --muted:#69758e;
+  --line:#e4e7ef;
+  --line-2:#d5dae6;
+  --brand:#2f6bff;
+  --brand-2:#7c5cff;
+  --brand-ink:#1d4ed8;
+  --brand-soft:#eaf0ff;
+  --t1:#c26a00; --t1-soft:#fff4e2; --t1-line:#f2d3a4;
+  --t2:#0a72bd; --t2-soft:#e7f4ff; --t2-line:#b9dff9;
+  --t3:#6d28d9; --t3-soft:#f2ecff; --t3-line:#dcccfb;
+  --ok:#0d8a62;
+  --shadow:0 1px 2px rgba(16,24,40,.04), 0 14px 30px -18px rgba(16,24,40,.22);
+  --shadow-lg:0 2px 4px rgba(16,24,40,.04), 0 26px 60px -28px rgba(16,24,40,.3);
+  --logo-bg:#ffffff;
+  --radius:18px;
+  --maxw:1080px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+html[data-theme="dark"]{
+  --bg:#080c15;
+  --card:#111827;
+  --card-2:#0d1421;
+  --nav-bg:rgba(8,12,21,.86);
+  --ink:#eef2fa;
+  --ink-2:#c6d0e2;
+  --muted:#8d9ab2;
+  --line:#232d40;
+  --line-2:#33405a;
+  --brand:#7db1ff;
+  --brand-2:#b8a3ff;
+  --brand-ink:#9cc4ff;
+  --brand-soft:#17233a;
+  --t1:#fbbf24; --t1-soft:#2b2210; --t1-line:#5b4312;
+  --t2:#5cc9ff; --t2-soft:#0d2433; --t2-line:#154a63;
+  --t3:#b79bff; --t3-soft:#1e1736; --t3-line:#3a2b66;
+  --ok:#34d399;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 18px 40px -20px rgba(0,0,0,.7);
+  --shadow-lg:0 2px 6px rgba(0,0,0,.4), 0 30px 70px -30px rgba(0,0,0,.85);
+  --logo-bg:#0b1220;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  font-size:15px;
+  line-height:1.7;
+  color:var(--ink);
+  background:var(--bg);
+  background-image:
+    radial-gradient(900px 420px at 12% -6%, rgba(47,107,255,.09), transparent 62%),
+    radial-gradient(820px 400px at 92% -2%, rgba(124,92,255,.08), transparent 58%);
+  background-repeat:no-repeat;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+html[data-theme="dark"] body{
+  background-image:
+    radial-gradient(900px 420px at 12% -6%, rgba(60,110,255,.18), transparent 62%),
+    radial-gradient(820px 400px at 92% -2%, rgba(130,95,255,.16), transparent 58%);
+}
+::selection{background:rgba(47,107,255,.18)}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+button{font-family:inherit}
+img{max-width:100%}
+.container{width:min(100% - 40px,var(--maxw));margin-inline:auto}
+.mono{font-family:var(--mono)}
+.hidden{display:none !important}
+
+/* ---------- 导航 ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+          backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:-.01em}
+.brand-mark{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#fff;font-size:13px;font-weight:900;letter-spacing:-.04em;
+  box-shadow:0 4px 12px -2px rgba(47,107,255,.45);
+}
+.brand small{font-size:11px;font-weight:600;color:var(--muted);margin-left:2px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{padding:7px 12px;border-radius:8px;font-size:13px;font-weight:600;color:var(--ink-2);transition:.18s}
+.nav-links a:hover{background:var(--card-2);color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.snap{font-size:11.5px;font-weight:700;color:var(--brand-ink);background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 22%,transparent);padding:5px 10px;border-radius:999px;white-space:nowrap}
+.theme-btn{
+  width:34px;height:34px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-2);cursor:pointer;display:grid;place-items:center;
+  font-size:15px;line-height:1;transition:.18s;
+}
+.theme-btn:hover{border-color:var(--line-2);color:var(--ink);transform:translateY(-1px)}
+
+/* ---------- Hero：课程封面 ---------- */
+.hero{padding:56px 0 24px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(330px,.94fr);gap:46px;align-items:center}
+.course-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--brand-ink);
+  background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 24%,transparent);
+  padding:5px 11px;border-radius:7px;
+}
+.course-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 16%,transparent)}
+.hero h1{
+  margin:16px 0 0;max-width:620px;
+  font-size:clamp(30px,4.6vw,50px);line-height:1.2;font-weight:900;letter-spacing:-.035em;
+}
+.hero h1 .grad{background:linear-gradient(100deg,var(--brand) 10%,var(--brand-2) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{margin:16px 0 0;max-width:560px;font-size:15.5px;line-height:1.85;color:var(--ink-2)}
+.hero .lead b{color:var(--ink);font-weight:700}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-meta span{font-size:11.5px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+/* 课程目录卡 */
+.syllabus{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);padding:20px;position:relative;overflow:hidden}
+.syllabus::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+.syl-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.syl-title{font-size:13px;font-weight:800;letter-spacing:.01em}
+.syl-time{font-size:11px;color:var(--muted);font-weight:600}
+.syl-learn{margin-top:12px;padding:12px;border-radius:10px;background:var(--card-2);border:1px dashed var(--line-2)}
+.syl-learn .lt{font-size:11.5px;font-weight:800;color:var(--ink);margin-bottom:5px}
+.syl-learn ul{display:flex;flex-direction:column;gap:4px}
+.syl-learn li{position:relative;padding-left:18px;font-size:11.5px;line-height:1.6;color:var(--ink-2)}
+.syl-learn li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--ok);font-weight:900;font-size:10.5px}
+.syl-list{margin-top:12px;display:flex;flex-direction:column;gap:3px}
+.syl-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:9px;transition:.16s}
+.syl-item:hover{background:var(--card-2);transform:translateX(2px)}
+.syl-n{width:24px;height:24px;flex:0 0 24px;border-radius:7px;display:grid;place-items:center;font-size:10.5px;font-weight:900;color:var(--brand-ink);background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent)}
+.syl-t{flex:1;min-width:0}
+.syl-t b{display:block;font-size:12.5px;font-weight:700;color:var(--ink)}
+.syl-t span{display:block;font-size:10.5px;color:var(--muted)}
+.syl-d{font-size:10.5px;color:var(--muted);white-space:nowrap}
+.syl-go{color:var(--muted);font-size:12px}
+/* 阅读进度条 */
+.readbar{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--brand),var(--brand-2));z-index:70;transition:width .12s linear;pointer-events:none}
+.cta{display:flex;justify-content:flex-start;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  height:44px;padding:0 20px;border-radius:12px;font-size:14px;font-weight:700;
+  border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap;
+}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 10px 24px -10px rgba(47,107,255,.55)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 30px -12px rgba(47,107,255,.65)}
+.btn-ghost{background:var(--card);color:var(--ink);border-color:var(--line);box-shadow:var(--shadow)}
+.btn-ghost:hover{border-color:var(--line-2);transform:translateY(-1px)}
+.btn-sm{height:34px;padding:0 12px;font-size:12.5px;border-radius:9px;font-weight:700}
+.btn-primary.btn-sm{box-shadow:none}
+.step-meta{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.step-time{font-size:10.5px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:1.5px 8px;border-radius:999px;white-space:nowrap}
+.next{display:flex;justify-content:flex-end;margin-top:22px}
+.next a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--brand-ink);background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 22%,transparent);padding:7px 13px;border-radius:9px;transition:.18s}
+.next a:hover{transform:translateX(2px)}
+
+/* ---------- 步骤通用 ---------- */
+.step{padding:56px 0 8px;scroll-margin-top:76px}
+.step-head{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start;margin-bottom:26px}
+.step-no{
+  font-size:44px;line-height:1;font-weight:900;letter-spacing:-.05em;
+  color:transparent;-webkit-text-stroke:1.5px var(--line-2);
+  font-variant-numeric:tabular-nums;padding-top:4px;
+}
+.step-kicker{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:6px}
+.step-head h2{font-size:clamp(22px,2.8vw,30px);line-height:1.3;font-weight:800;letter-spacing:-.02em}
+.step-head p{margin-top:8px;font-size:14px;color:var(--muted);max-width:680px}
+
+/* ---------- 第 1 步：概念 ---------- */
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.term{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;
+  box-shadow:var(--shadow);transition:.2s;
+}
+.term:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:var(--shadow-lg)}
+.term .ico{
+  width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:18px;margin-bottom:12px;
+  background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 18%,transparent);
+}
+.term h3{font-size:15px;font-weight:800;display:flex;align-items:center;gap:6px}
+.term h3 em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.term p{margin-top:6px;font-size:12.5px;line-height:1.65;color:var(--ink-2)}
+.term p b{color:var(--ink);font-weight:700}
+
+/* ---------- 第 2 步：排行 ---------- */
+.rank-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.rank-bar .hint{font-size:12.5px;color:var(--muted)}
+.rank-bar .hint b{color:var(--ink)}
+.seg{display:inline-flex;gap:2px;padding:3px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.seg button{
+  border:0;background:transparent;color:var(--muted);font-size:12.5px;font-weight:700;
+  padding:6px 12px;border-radius:7px;cursor:pointer;transition:.16s;
+}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);box-shadow:0 2px 6px rgba(16,24,40,.16)}
+html[data-theme="dark"] .seg button[aria-pressed="true"]{background:var(--brand);color:#08101f}
+
+.tier-band{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:26px 0 10px;padding:9px 14px;border-radius:11px;
+  border:1px solid var(--t1-line);background:var(--t1-soft);
+}
+.tier-band:first-of-type{margin-top:0}
+.tier-band .tn{font-size:12.5px;font-weight:900;color:var(--t1);letter-spacing:.02em}
+.tier-band .td{font-size:11.5px;color:var(--ink-2)}
+.tier-band .tc{margin-left:auto;font-size:11px;font-weight:800;color:var(--t1)}
+.tier-band.t2{border-color:var(--t2-line);background:var(--t2-soft)}
+.tier-band.t2 .tn,.tier-band.t2 .tc{color:var(--t2)}
+.tier-band.t3{border-color:var(--t3-line);background:var(--t3-soft)}
+.tier-band.t3 .tn,.tier-band.t3 .tc{color:var(--t3)}
+
+.rank-list{display:flex;flex-direction:column;gap:10px}
+.rank-row{
+  display:grid;grid-template-columns:46px minmax(0,1.2fr) minmax(240px,.95fr) 286px;
+  gap:18px;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:16px 18px;box-shadow:var(--shadow);
+  transition:border-color .18s, transform .18s, box-shadow .18s;
+  scroll-margin-top:80px;
+}
+.rank-row:hover{border-color:color-mix(in srgb,var(--brand) 30%,var(--line));transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.rank-no{
+  font-size:21px;font-weight:900;letter-spacing:-.04em;text-align:center;
+  color:var(--muted);font-variant-numeric:tabular-nums;
+}
+.rank-row[data-tier="1"] .rank-no{color:var(--t1)}
+.rank-row[data-tier="2"] .rank-no{color:var(--t2)}
+.rank-row[data-tier="3"] .rank-no{color:var(--t3)}
+
+.co-head{display:flex;gap:12px;align-items:flex-start}
+.logo{
+  width:42px;height:42px;flex:0 0 42px;border-radius:12px;overflow:hidden;
+  background:var(--logo-bg);border:1px solid var(--line);
+  display:grid;place-items:center;position:relative;
+}
+.logo img{width:100%;height:100%;object-fit:contain;padding:6px;position:absolute;inset:0;z-index:2;background:var(--logo-bg)}
+.logo-fb{
+  font-family:var(--mono);font-size:12px;font-weight:800;color:var(--brand-ink);
+  z-index:1;letter-spacing:-.02em;
+}
+.co-title{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.co-title h3{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
+.flag{font-size:11.5px;line-height:1}
+.badge{font-size:10px;font-weight:800;padding:1.5px 6px;border-radius:6px;border:1px solid transparent;line-height:1.5}
+.badge.t1{color:var(--t1);background:var(--t1-soft);border-color:var(--t1-line)}
+.badge.t2{color:var(--t2);background:var(--t2-soft);border-color:var(--t2-line)}
+.badge.t3{color:var(--t3);background:var(--t3-soft);border-color:var(--t3-line)}
+.co-short{margin-top:2px;font-size:12px;color:var(--muted);line-height:1.5}
+.models{margin-top:8px;display:flex;flex-wrap:wrap;align-items:center;gap:3px 10px;font-size:11px;line-height:1.55;color:var(--ink-2)}
+.models .m-label{font-family:var(--font);font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--muted);flex:0 0 auto}
+.models .m-name{font-family:var(--mono);display:inline-flex;align-items:center;gap:5px}
+.models .m-name::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--line-2);flex:0 0 3px}
+
+.agents{display:flex;flex-direction:column;gap:7px;min-width:0}
+.agent{
+  display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:9px;
+  border:1px solid var(--line);background:var(--card-2);font-size:12px;min-width:0;transition:.16s;
+}
+.agent:hover{border-color:var(--line-2);background:var(--card)}
+.agent .tag{font-size:9.5px;font-weight:800;letter-spacing:.04em;padding:1px 5px;border-radius:4px;flex:0 0 auto;line-height:1.5}
+.agent.coding .tag{color:var(--t2);background:var(--t2-soft);border:1px solid var(--t2-line)}
+.agent.office .tag{color:var(--t1);background:var(--t1-soft);border:1px solid var(--t1-line)}
+.agent .an{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.agent .ar{margin-left:auto;color:var(--muted);font-size:11px;flex:0 0 auto}
+.agent.no-link{opacity:.55;cursor:default}
+
+.links{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;align-items:center}
+.link-site{font-size:11.5px;font-weight:700;color:var(--muted);padding:0 2px;white-space:nowrap}
+.link-site:hover{color:var(--brand-ink)}
+
+/* ---------- 第 3 步：按需求选 ---------- */
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pick-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.pick-card h3{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px}
+.pick-card h3 .ico{font-size:16px}
+.pick-card .pd{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.6}
+.pick-list{margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.pick-item{
+  display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:var(--card-2);
+  transition:.16s;
+}
+.pick-item:hover{border-color:color-mix(in srgb,var(--brand) 30%,var(--line));background:var(--card);transform:translateX(2px)}
+.pick-item b{font-size:12.5px;font-weight:700;color:var(--ink)}
+.pick-item span{font-size:11px;color:var(--muted);white-space:nowrap}
+.picks-note{margin-top:14px;font-size:12px;color:var(--muted);line-height:1.7}
+
+/* ---------- 第 4 步：开始使用 ---------- */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.tip .tn{font-size:12px;font-weight:900;color:var(--brand);letter-spacing:.06em}
+.tip h3{font-size:14px;font-weight:800;margin-top:6px}
+.tip p{font-size:12.5px;color:var(--ink-2);margin-top:5px;line-height:1.65}
+.tip p b{color:var(--ink)}
+
+/* ---------- 数据说明 ---------- */
+.data{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);margin-top:12px}
+.data h2{font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+.data h2 .no{width:22px;height:22px;border-radius:6px;background:var(--brand-soft);color:var(--brand-ink);display:grid;place-items:center;font-size:11px;font-weight:900}
+.data ul{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.data li{position:relative;padding-left:16px;font-size:12.5px;color:var(--ink-2);line-height:1.7}
+.data li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;border-radius:2px;background:var(--brand);opacity:.6}
+.data li b{color:var(--ink);font-weight:700}
+.sources{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.sources a{
+  font-size:11.5px;font-weight:700;color:var(--ink-2);
+  padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card-2);transition:.16s;
+}
+.sources a:hover{color:var(--brand-ink);border-color:color-mix(in srgb,var(--brand) 30%,var(--line));transform:translateY(-1px)}
+.disclaimer{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--muted);line-height:1.75}
+.disclaimer b{color:var(--ink-2)}
+.footer{padding:34px 0 48px;color:var(--muted);font-size:11.5px}
+.footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.footer b{color:var(--ink-2)}
+
+/* ---------- 动效 ---------- */
+html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1)}
+html.js .reveal.in{opacity:1;transform:none}
+.to-top{
+  position:fixed;right:20px;bottom:20px;width:40px;height:40px;border-radius:11px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink-2);cursor:pointer;
+  box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(6px);transition:.2s;z-index:40;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{color:var(--ink);border-color:var(--line-2)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .rank-row{grid-template-columns:40px minmax(0,1fr);gap:12px 14px}
+  .rank-no{grid-row:span 3;align-self:start;padding-top:6px;font-size:18px}
+  .rank-co{grid-column:2}
+  .agents{grid-column:2;flex-direction:row;flex-wrap:wrap}
+  .agent{flex:1 1 220px}
+  .links{grid-column:2;justify-content:flex-start}
+  .terms{grid-template-columns:repeat(2,1fr)}
+  .picks{grid-template-columns:1fr}
+  .tips{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .container{width:calc(100% - 28px)}
+  .nav-links{display:none}
+  .nav-in{height:56px}
+  .snap{display:none}
+  .hero{padding:38px 0 16px}
+  .hero h1{font-size:clamp(27px,7.6vw,38px)}
+  .hero .lead{font-size:14px}
+  .hero-meta span{font-size:10.5px}
+  .syllabus{padding:16px}
+  .step{padding:40px 0 6px}
+  .step-head{grid-template-columns:44px 1fr;gap:10px;margin-bottom:18px}
+  .step-no{font-size:32px;-webkit-text-stroke-width:1.2px}
+  .step-head p{font-size:13px}
+  .terms{grid-template-columns:1fr}
+  .rank-row{padding:14px}
+  .rank-bar{align-items:flex-start;flex-direction:column;gap:10px}
+  .models{font-size:10.5px;gap:2px 8px}
+  .links{width:100%}
+  .links .btn{flex:1 1 auto}
+  .data{padding:18px}
+  .footer{padding:26px 0 40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html.js .reveal{opacity:1;transform:none}
+}
+@media print{
+  .nav,.to-top,.seg,.links,.rank-bar .seg{display:none !important}
+  body{background:#fff}
+  .rank-row,.term,.pick-card,.tip,.data{box-shadow:none}
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="readbar" id="readbar" aria-hidden="true"></div>
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <span>AI 入门课<small>2026</small></span>
+    </a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#basics">① 基础</a>
+      <a href="#ranking">② 排行</a>
+      <a href="#choose">③ 选工具</a>
+      <a href="#start">④ 上手</a>
+    </nav>
+    <div class="nav-right">
+      <span class="snap">数据截至 2026.10</span>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换深色 / 浅色模式">☾</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="course-tag"><span class="dot"></span>AI 入门课 · 第 1 期</span>
+        <h1>从 0 开始，看懂<br><span class="grad">AI 公司与智能体</span></h1>
+        <p class="lead">
+          这是一份写给<b>完全不懂 AI 的人</b>的入门指南。4 个小节、约 10 分钟，
+          读完你就能判断谁更强、自己该用哪个工具、以及去哪里注册。
+        </p>
+        <div class="hero-meta">
+          <span>零基础友好</span>
+          <span>约 10 分钟</span>
+          <span>20 家公司 · 40 个智能体</span>
+          <span>数据截至 2026.10</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#basics">开始学习 ↓</a>
+          <a class="btn btn-ghost" href="#ranking">直接看排行</a>
+        </div>
+      </div>
+      <aside class="syllabus" aria-label="本课目录">
+        <div class="syl-head"><span class="syl-title">本课目录</span><span class="syl-time">约 10 分钟</span></div>
+        <div class="syl-learn">
+          <div class="lt">学完你会</div>
+          <ul>
+            <li>分清大模型、智能体、编程 / 办公智能体</li>
+            <li>知道 20 家公司各自强在哪</li>
+            <li>找到适合自己的工具并完成注册</li>
+          </ul>
+        </div>
+        <div class="syl-list">
+          <a class="syl-item" href="#basics"><span class="syl-n">01</span><span class="syl-t"><b>认识 4 个词</b><span>大模型 / 智能体 / 两类智能体</span></span><span class="syl-d">2 分钟</span><span class="syl-go">→</span></a>
+          <a class="syl-item" href="#ranking"><span class="syl-n">02</span><span class="syl-t"><b>看公司排行</b><span>20 家公司，谁强在哪</span></span><span class="syl-d">5 分钟</span><span class="syl-go">→</span></a>
+          <a class="syl-item" href="#choose"><span class="syl-n">03</span><span class="syl-t"><b>按需求挑工具</b><span>写代码 / 办公 / 开源部署</span></span><span class="syl-d">2 分钟</span><span class="syl-go">→</span></a>
+          <a class="syl-item" href="#start"><span class="syl-n">04</span><span class="syl-t"><b>注册与下载</b><span>3 条上手小提示</span></span><span class="syl-d">1 分钟</span><span class="syl-go">→</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 第 1 步 ============ -->
+  <section class="step" id="basics">
+    <div class="container">
+      <div class="step-head reveal">
+        <div class="step-no">01</div>
+        <div>
+          <div class="step-meta"><span class="step-kicker">第 1 节 · 基础概念</span><span class="step-time">约 2 分钟</span></div>
+          <h2>先认识 4 个词</h2>
+          <p>不懂 AI 也没关系。这四个词是整张地图的图例，看懂它们，后面的排行就能读懂。</p>
+        </div>
+      </div>
+      <div class="terms">
+        <div class="term reveal">
+          <div class="ico">🧠</div>
+          <h3>大模型 <em>LLM</em></h3>
+          <p>AI 的<b>大脑</b>：读过海量文字，会写、会算、能看图。它是发动机，但需要产品才能用起来。</p>
+        </div>
+        <div class="term reveal">
+          <div class="ico">🤖</div>
+          <h3>智能体 <em>Agent</em></h3>
+          <p>给大脑装上<b>手脚</b>：你给目标，它自己拆任务、用工具、操作电脑，跑完整流程。</p>
+        </div>
+        <div class="term reveal">
+          <div class="ico">⌨️</div>
+          <h3>编程智能体</h3>
+          <p>在终端或 IDE 里替你<b>读代码、改代码、跑测试</b>。代表：Claude Code、Codex、Trae。</p>
+        </div>
+        <div class="term reveal">
+          <div class="ico">🧑‍💼</div>
+          <h3>办公智能体</h3>
+          <p>替你做<b>资料、表格、PPT、邮件</b>。代表：WorkBuddy、Kimi Work、M365 Copilot。</p>
+        </div>
+      </div>
+      <div class="next reveal"><a href="#ranking">下一节：看公司排行 →</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 第 2 步：公司排行 ============ -->
+  <section class="step" id="ranking">
+    <div class="container">
+      <div class="step-head reveal">
+        <div class="step-no">02</div>
+        <div>
+          <div class="step-meta"><span class="step-kicker">第 2 节 · 公司排行</span><span class="step-time">约 5 分钟</span></div>
+          <h2>20 家公司，谁排第一？</h2>
+          <p>只比一件事——主力模型的智力水平。每行右侧就是注册与下载入口；同一梯队内顺序为综合参考。</p>
+        </div>
+      </div>
+      <div class="rank-bar reveal">
+        <div class="hint"><b>20 家</b> · 国内 10 / 海外 10 · 点击右侧按钮直达注册与下载</div>
+        <div class="seg" role="group" aria-label="按阵营筛选">
+          <button type="button" data-camp="all" aria-pressed="true">全部</button>
+          <button type="button" data-camp="cn" aria-pressed="false">🇨🇳 国内</button>
+          <button type="button" data-camp="intl" aria-pressed="false">🌍 海外</button>
+        </div>
+      </div>
+      <div id="rankList" class="rank-list"><!-- JS --></div>
+      <div class="next reveal"><a href="#choose">下一节：按需求挑工具 →</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 第 3 步：按需求选 ============ -->
+  <section class="step" id="choose">
+    <div class="container">
+      <div class="step-head reveal">
+        <div class="step-no">03</div>
+        <div>
+          <div class="step-meta"><span class="step-kicker">第 3 节 · 工具选择</span><span class="step-time">约 2 分钟</span></div>
+          <h2>按需求挑一个工具</h2>
+          <p>先想清楚你要干什么：写代码、做办公，还是自己部署。点名字直接打开官方入口。</p>
+        </div>
+      </div>
+      <div class="picks">
+        <div class="pick-card reveal">
+          <h3><span class="ico">⌨️</span>想写代码</h3>
+          <p class="pd">编程智能体：在终端 / IDE 里直接改你的项目。</p>
+          <div class="pick-list" id="pickCoding"><!-- JS --></div>
+        </div>
+        <div class="pick-card reveal">
+          <h3><span class="ico">🧑‍💼</span>想办公提效</h3>
+          <p class="pd">白领智能体：查资料、做表、写报告、回邮件。</p>
+          <div class="pick-list" id="pickOffice"><!-- JS --></div>
+        </div>
+        <div class="pick-card reveal">
+          <h3><span class="ico">🔓</span>想开源 / 自己部署</h3>
+          <p class="pd">开放权重模型：可下载、可私有化、成本更可控。</p>
+          <div class="pick-list" id="pickOpen"><!-- JS --></div>
+        </div>
+      </div>
+      <p class="picks-note reveal">提示：海外产品通常用邮箱注册，部分可能需要外币卡或特定网络环境；不确定就先试免费版。只想选模型的话：<b>T1 前 8 名</b>综合最强；想便宜大碗，优先看名字带 <b>Flash</b> 的型号（DeepSeek V4.1 Flash、GLM-5.3 Flash、MiniMax M3.1 Flash）。</p>
+      <div class="next reveal"><a href="#start">下一节：注册与下载 →</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 第 4 步：开始使用 ============ -->
+  <section class="step" id="start">
+    <div class="container">
+      <div class="step-head reveal">
+        <div class="step-no">04</div>
+        <div>
+          <div class="step-meta"><span class="step-kicker">第 4 节 · 上手使用</span><span class="step-time">约 1 分钟</span></div>
+          <h2>注册与下载：3 条小提示</h2>
+          <p>选好之后，回到排行榜点「注册体验」或「下载 App」即可。下面是三条上手提示。</p>
+        </div>
+      </div>
+      <div class="tips">
+        <div class="tip reveal"><div class="tn">国内产品</div><h3>手机号就能注册</h3><p>多数支持手机号 / 微信登录，注册后一般有<b>免费额度</b>，先试用再决定。</p></div>
+        <div class="tip reveal"><div class="tn">海外产品</div><h3>邮箱注册，按需选择</h3><p>通常用邮箱注册；部分服务需要<b>外币卡</b>或特定网络环境，先用免费版试试。</p></div>
+        <div class="tip reveal"><div class="tn">编程智能体</div><h3>先装工具再登录</h3><p>CLI 或 IDE 插件装好后用账号登录；办公智能体一般直接<b>网页端</b>就能用。</p></div>
+      </div>
+      <div class="cta" style="justify-content:flex-start;margin-top:22px">
+        <a class="btn btn-primary" href="#ranking">回到排行，开始选 ↑</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 数据说明 ============ -->
+  <section class="step" id="data">
+    <div class="container">
+      <div class="data reveal">
+        <h2><span class="no">i</span>排行依据与数据来源</h2>
+        <ul>
+          <li><b>模型智力：</b>Artificial Analysis Intelligence Index v5（2026-10-27 升级，旧版分数作废）、LMArena 人类盲测（10-22 数据）。</li>
+          <li><b>实际能力与用量：</b>Terminal-Bench 4.0、OpenRouter 周 token 用量；国内公司另参考 OpenCompass 司南（26-07 期）与 SuperCLUE（2026 年 7 月期）。</li>
+          <li><b>快照时间 2026-10-29：</b>榜单每月都会变，名次会过时；未发布的传闻（豆包 2.2、Qwen4、GLM-5.5、Grok 5 等）未列入本页。</li>
+        </ul>
+        <div class="sources">
+          <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener noreferrer">AA 智力指数 v5 ↗</a>
+          <a href="https://arena.ai/leaderboard" target="_blank" rel="noopener noreferrer">LMArena ↗</a>
+          <a href="https://www.tbench.ai/leaderboard" target="_blank" rel="noopener noreferrer">Terminal-Bench 4.0 ↗</a>
+          <a href="https://openrouter.ai/rankings" target="_blank" rel="noopener noreferrer">OpenRouter ↗</a>
+          <a href="https://rank.opencompass.org.cn/leaderboard-llm" target="_blank" rel="noopener noreferrer">OpenCompass 司南 ↗</a>
+          <a href="https://www.superclueai.com" target="_blank" rel="noopener noreferrer">SuperCLUE ↗</a>
+          <a href="https://artificialanalysis.ai/agents/coding-agents" target="_blank" rel="noopener noreferrer">AA 编程智能体榜 ↗</a>
+        </div>
+        <p class="disclaimer">
+          <b>说明：</b>本页面向非技术读者，分梯队与排序为编辑综合公开榜单后的判断，非任何机构官方排名。公司 Logo 尝试从官网加载，失败时显示文字图标；注册 / 下载链接指向各公司官方入口。小米 MiMo、商汤 SenseNova、美团 LongCat 等也在快速迭代，未收入本页 20 家名单。
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span><b>AI 全景图 · 2026</b> · 数据快照 2026-10-29 · 单文件静态页</span>
+    <span>内容由公开资料整理，不构成采购或投资建议</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+<noscript><div style="padding:20px;text-align:center">本页需要启用 JavaScript 才能显示排行。</div></noscript>
+
+<script>
+const DATA = [
+  /* ============================================================
+     第一梯队 · 前沿领跑（8 家）
+     依据：AA Intelligence Index v5（2026-10-27）、LMArena（10-22）、
+     Terminal-Bench 4.0、OpenRouter 用量、OpenCompass/SuperCLUE（国内）
+     ============================================================ */
+  {
+    id:'google', cn:'Google', en:'Google DeepMind', camp:'intl', tier:1, tierRank:1,
+    domain:'google.com', color:['#4285f4','#a78bfa'], mark:'G',
+    tagline:'Gemini 系列开发者，10 月拿下「三榜第一」',
+    model:{ name:'Gemini 4 Carbon', date:'2026-10', desc:'10 月新旗舰：AA 智力指数 59.4 登顶，多模态、长上下文与 Agent 任务全面领先。',
+      stats:[['AA 智力指数 v5','59.4 · 全球第 1'],['LMArena 文本','Argon 1517 · 第 1'],['Terminal-Bench 4.0','65.2% · 第 2']] },
+    agents:[
+      {type:'coding', name:'Google Antigravity', form:'Agent IDE / CLI / 云端', desc:'代理优先的开发工具，可让多个 Agent 并行写代码、跑视觉评估。', url:'https://antigravity.google/'},
+      {type:'office', name:'Gemini 代理', form:'Workspace / 云端', desc:'10-08 发布的统一工作代理，在文档、邮箱与开发环境里持续执行任务。', url:'https://gemini.google.com/'}
+    ],
+    links:{ signup:'https://gemini.google.com/', download:'https://apps.apple.com/app/google-gemini/id6477489729', site:'https://deepmind.google/' },
+    alt:['Gemini 4 Argon — 公开旗舰，LMArena 文本与编程双榜第 1','Gemini 3.8 Flash — 便宜大碗的上一代 Flash'],
+    basis:'AA v5 第 1（Gemini 4 Carbon 59.4，10-28）；LMArena 文本第 1（Argon 1517）与编程第 1（1552）——10 月唯一三榜第一。',
+    tags:['多模态','长上下文','生态'],
+    sources:[['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['Gemini 4 Carbon 公告','https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1'],['LMArena','https://arena.ai/leaderboard']]
+  },
+  {
+    id:'anthropic', cn:'Anthropic', en:'Claude', camp:'intl', tier:1, tierRank:2,
+    domain:'anthropic.com', color:['#e07b53','#f5b48c'], mark:'A',
+    tagline:'Claude 系列开发者，编程智能体全球第一',
+    model:{ name:'Claude Opus 5.5', date:'2026-09', desc:'综合最聪明的「干活型」模型，写代码与知识工作都拔尖。',
+      stats:[['AA 智力指数 v5','58.4 · 全球第 2'],['AA 编程智能体','62 · 全球第 1'],['LMArena 文本','前 10 占 6 席']] },
+    agents:[
+      {type:'coding', name:'Claude Code', form:'CLI / IDE / 云端', desc:'在终端里读代码库、改多文件、跑测试、开 PR，10 月仍是编程智能体榜第一。', url:'https://claude.com/product/claude-code'},
+      {type:'office', name:'Claude Cowork / Duet', form:'桌面 / 网页', desc:'Cowork 把编程 Agent 的能力搬进办公场景；Duet 是每天推简报、盯邮件的主动代理。', url:'https://claude.com/product/cowork'}
+    ],
+    links:{ signup:'https://claude.ai/login', download:'https://claude.ai/download', site:'https://www.anthropic.com/' },
+    alt:['Claude Sonnet 5.5 — 更快更便宜，编程智能体 59 分','Claude Haiku 5.5 — 10-07 发布，最便宜的小模型'],
+    basis:'AA v5 第 2（58.4）；AA Coding Agent Index 第 1（62）；LMArena 文本前 10 占 6 席，三榜同时在最前沿。',
+    tags:['编程','推理','企业'],
+    sources:[['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['Claude Code','https://claude.com/product/claude-code'],['Claude Duet 发布','https://claude.com/resources/articles/claude-duet']]
+  },
+  {
+    id:'openai', cn:'OpenAI', en:'ChatGPT', camp:'intl', tier:1, tierRank:3,
+    domain:'openai.com', color:['#10a37f','#6ee7b7'], mark:'O',
+    tagline:'ChatGPT 母公司，通用模型与编程智能体双线推进',
+    model:{ name:'GPT-6 Astra', date:'2026-09', desc:'旗舰通用模型，编程、终端操作与科研推理表现突出。',
+      stats:[['AA 智力指数 v5','56.9 · 全球第 4'],['AA 编程智能体','55 · Codex'],['LMArena Coding','GPT-6 Astra 第 9']] },
+    agents:[
+      {type:'coding', name:'Codex', form:'CLI / IDE / 云端', desc:'在终端、IDE 或云端替你读代码库、改代码、跑测试、提 PR。', url:'https://openai.com/codex/'},
+      {type:'office', name:'ChatGPT Dots', form:'网页 / 桌面', desc:'9-30 发布的常驻个人智能体：一人一个云端电脑+浏览器，可 24 小时自主执行任务。', url:'https://chatgpt.com/'}
+    ],
+    links:{ signup:'https://chatgpt.com/', download:'https://apps.apple.com/app/chatgpt/id6448311069', site:'https://openai.com/' },
+    alt:['GPT-6.1 Sol — 10 月新发，能力接近 Astra、价格约 1/5','GPT-6.1 Terra — 10-26 发布，前沿模型里最便宜（$0.96/任务）'],
+    basis:'AA v5 第 4（56.9）且第 4–14 名占 7 席；Codex 编程智能体 55；LMArena 文本人气仅第 21，但综合能力仍是第一梯队。',
+    tags:['编程','通用','生态'],
+    sources:[['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['AA Coding Agent','https://artificialanalysis.ai/agents/coding-agents'],['ChatGPT Dots 报道','https://www.tmtpost.com/8164600.html']]
+  },
+  {
+    id:'meta', cn:'Meta', en:'Meta AI · Muse', camp:'intl', tier:1, tierRank:4,
+    domain:'meta.ai', color:['#0866ff','#67e8f9'], mark:'M',
+    tagline:'开源 Llama 起家，10 月靠 Muse Wonder 重回前沿',
+    model:{ name:'Muse Wonder', date:'2026-10', desc:'「个人超级智能」底座：1M 上下文、原生多模态，擅长代理任务与科学推理。',
+      stats:[['LMArena 文本','1509 · 第 2/3'],['AA 智力指数 v5','49.7 · 第 15'],['AA 编程智能体','68 · Muse Code']] },
+    agents:[
+      {type:'coding', name:'Muse Code', form:'云端', desc:'Meta 的编程代理，只有它能用满血 Muse Wonder Full，编程智能体指数 68。', url:'https://www.meta.ai/'},
+      {type:'office', name:'Meta Muse', form:'App', desc:'全天候个人代理：每人一台云端电脑，可代发邮件、排日程、订票、填表。', url:'https://www.meta.ai/'}
+    ],
+    links:{ signup:'https://www.meta.ai/', download:'https://apps.apple.com/app/meta-ai/id1558240027', site:'https://ai.meta.com/' },
+    alt:['Muse Wonder Full — 更强版，仅 Muse Code 可用','Muse Spark Open — 10-15 开源的 816B 模型'],
+    basis:'Muse Wonder 在 LMArena 文本榜第 2/3（1509）；AA v5 第 15（49.7）；编程智能体指数 68，与一线并列。',
+    tags:['开源权重','多模态','社交生态'],
+    sources:[['AA Muse Wonder 评测','https://artificialanalysis.ai/articles/muse-wonder'],['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['LMArena','https://arena.ai/leaderboard']]
+  },
+  {
+    id:'moonshot', cn:'月之暗面', en:'Moonshot AI · Kimi', camp:'cn', tier:1, tierRank:5,
+    domain:'kimi.com', color:['#8b5cf6','#ddd6fe'], mark:'K',
+    tagline:'Kimi 系列，拿下全球编程智能体单项第一',
+    model:{ name:'Kimi K3.1 Pro', date:'2026-10', desc:'3 万亿级参数、100 万上下文的开源旗舰，长程编程与办公文档任务突出。',
+      stats:[['Terminal-Bench 4.0','67.2% · 全球第 1'],['AA 智力指数 v5','46.0 · 第 22'],['OfficeQA Pro v2','64.4 · SOTA']] },
+    agents:[
+      {type:'coding', name:'Kimi Code', form:'CLI', desc:'装在终端里的编程智能体，K3.1 Pro 首发即接入。', url:'https://www.kimi.com/code'},
+      {type:'office', name:'Kimi Work', form:'桌面端', desc:'面向白领的办公智能体，可直接交付文档、表格、PPT 与金融研究。', url:'https://www.kimi.com/products/kimi-work'}
+    ],
+    links:{ signup:'https://www.kimi.com/', download:'https://www.kimi.com/products/download', site:'https://www.moonshot.cn/' },
+    alt:['Kimi K3.1 Pro Highspeed — 同代高速版，快 2–3 倍','Kimi K3 — 前代开源旗舰'],
+    basis:'Terminal-Bench 4.0 67.2% 全球第 1（AA 复跑，10-23）；AA v5 46.0 第 22（v4.3 时点曾距前沿仅 3 分）；OfficeQA Pro v2 取得 SOTA。',
+    tags:['编程','长上下文','开源权重'],
+    sources:[['Kimi K3.1 Pro 技术博客','https://www.kimi.com/en/blog/kimi-k3-1-pro'],['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['CGTN 报道','https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/p.html']]
+  },
+  {
+    id:'alibaba', cn:'阿里巴巴', en:'Alibaba · Qwen', camp:'cn', tier:1, tierRank:6,
+    domain:'qwen.ai', icon:'https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png', color:['#615ced','#c4b5fd'], mark:'Q',
+    tagline:'Qwen 开源生态最大，中文与多模态双榜领先',
+    model:{ name:'Qwen3.8-Max', date:'2026-08', desc:'2.4 万亿参数 MoE 旗舰，百万上下文，支持图像视频输入。',
+      stats:[['OpenCompass 26-07','80.6 · 国产第 1'],['SuperCLUE','72.62 · 第 1'],['Text Arena','全球第 5 · 国产最高']] },
+    agents:[
+      {type:'coding', name:'Qoder / Qwen Code', form:'IDE / CLI', desc:'Qoder 是 Agentic IDE，Qwen Code 是开源命令行智能体；通义灵码已并入 Qoder CN。', url:'https://www.qoder.com/'},
+      {type:'office', name:'QwenWork', form:'网页', desc:'一站式 AI 智能体办公平台，覆盖文档、表格与汇报。', url:'https://qwenwork.ai/'}
+    ],
+    links:{ signup:'https://chat.qwen.ai/', download:'https://tongyi.aliyun.com/download', site:'https://www.qwen.ai/' },
+    alt:['Qwen3.8-Flash-Next — 开源轻量多模态，性价比高','Qwen3.5-397B-A17B — 上一代开源旗舰'],
+    basis:'司南 26-07 期第 3（80.6，国产最高）、SuperCLUE 通用榜第 1（72.62）；Text Arena 全球第 5、Vision Arena 第 2。',
+    tags:['开源权重','多模态','云生态'],
+    sources:[['Qwen3.8-Max 官方新闻稿','https://www.alibabacloud.com/zh/press-room/alibaba-unveils-qwen3-8-max'],['OpenCompass 司南','https://rank.opencompass.org.cn/leaderboard-llm'],['SuperCLUE','https://www.superclueai.com']]
+  },
+  {
+    id:'deepseek', cn:'深度求索', en:'DeepSeek', camp:'cn', tier:1, tierRank:7,
+    domain:'deepseek.com', color:['#4d6bfe','#93c5fd'], mark:'DS',
+    tagline:'国产开源标杆，OpenRouter 周用量全球第一',
+    model:{ name:'DeepSeek V4.1 Flash', date:'2026-10', desc:'552B MoE 开源旗舰，1017 更新版；编程与 Agent能力强、价格低。',
+      stats:[['OpenRouter 周用量','33.6 万亿 · 第 1'],['AA 智力指数 v5','32.5 · 第 39'],['DeepSWE v1.1','77.0%']] },
+    agents:[
+      {type:'coding', name:'DeepSeek Harness', form:'桌面端 / 开源框架', desc:'官方开源的可插件化 Agent 运行框架，能读写仓库、跑测试，也能做日常办公。', url:'https://www.deepseek.com/harness/'},
+      {type:'office', name:'DeepSeek Harness（同一产品）', form:'桌面端', desc:'官方示例包括整理资料、分析表格、撰写文档、生成汇报 PPT。', url:'https://www.deepseek.com/harness/'}
+    ],
+    links:{ signup:'https://chat.deepseek.com/', download:'https://www.deepseek.com/download/', site:'https://www.deepseek.com/' },
+    alt:['DeepSeek V4 Pro — 上一代旗舰','DeepSeek V4.1 Flash 首发版 — 已被 1017 更新取代'],
+    basis:'OpenRouter 周 token 全球第 1（33.6 万亿，环比 +801%）；AA v5 32.5 第 39，是已发布权重的开源最强之一；SuperCLUE 通用榜第 2 / 开源第 1。',
+    tags:['开源权重','编程','性价比'],
+    sources:[['DeepSeek 1017 更新说明','https://api-docs.deepseek.com/news/news261017/'],['DeepSeek Harness','https://www.deepseek.com/harness/'],['OpenRouter 报道','https://eu.36kr.com/en/p/4042510353257347']]
+  },
+  {
+    id:'zhipu', cn:'智谱 AI', en:'Z.ai · GLM', camp:'cn', tier:1, tierRank:8,
+    domain:'zhipuai.cn', icon:'https://zhipuai.cn/favicon.png', color:['#3b82f6','#a5b4fc'], mark:'GLM',
+    tagline:'GLM 系列开源旗舰，编程与智能体性价比高',
+    model:{ name:'GLM-5.3', date:'2026-08', desc:'1M 上下文开源旗舰，工具调用与 Agent 任务比肩一线闭源模型。',
+      stats:[['AA 智力指数 v5','31.6 · 开放权重最高之一'],['Terminal-Bench 4.0','41.9% · 开源近似最高'],['OpenRouter 周用量','GLM 5.3 Flash 第 4']] },
+    agents:[
+      {type:'coding', name:'GLM Coding Plan', form:'订阅 / CLI', desc:'一份订阅即可在 Claude Code、Cline 等主流编码 Agent 里使用 GLM-5.3。', url:'https://bigmodel.cn/coding-plan'},
+      {type:'office', name:'AutoGLM', form:'网页 / App', desc:'一句话生成深度研究报告与长文档的办公智能体。', url:'https://autoglm.zhipuai.cn/'}
+    ],
+    links:{ signup:'https://chat.z.ai/', download:'https://chatglm.cn/download', site:'https://z.ai/' },
+    alt:['GLM-5.3-Flash — 原生多模态，每任务约 $0.25','GLM-5.2 — 上一代旗舰，长程任务稳定'],
+    basis:'AA v5 31.6 为已发布权重并列最高；TB4.0 41.9% 开源近似最高；OpenRouter 周榜第 4（GLM 5.3 Flash 13.2 万亿）。',
+    tags:['开源权重','编程','智能体'],
+    sources:[['智谱官方模型概览','https://docs.bigmodel.cn/cn/guide/start/model-overview'],['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['Terminal-Bench','https://www.tbench.ai/leaderboard']]
+  },
+
+  /* ============================================================
+     第二梯队 · 主力竞争（7 家）
+     ============================================================ */
+  {
+    id:'xai', cn:'xAI', en:'Grok', camp:'intl', tier:2, tierRank:1,
+    domain:'x.ai', color:['#8b93a7','#e5e7eb'], mark:'x',
+    tagline:'Grok 系列开发者，绑定 X 的实时信息',
+    model:{ name:'Grok 4.7', date:'2026-09', desc:'主打快速响应与 X 实时信息的通用模型；Grok 5 至今仍未发布。',
+      stats:[['AA 智力指数 v5','35.0 · 第 33'],['Terminal-Bench 4.0','25.8% · 第 59'],['AA-Briefcase','1638 Elo']] },
+    agents:[
+      {type:'coding', name:'Cloud Agents（Grok Bot）', form:'云端', desc:'Grok Bot 里可生成多个云子代理，分头执行编码任务、写 PR。', url:'https://grok.com/'},
+      {type:'office', name:'Grok Bot', form:'App / 云电脑', desc:'带独立云电脑、24 小时在线的个人代理，可定时跑舆情监控与晨报。', url:'https://grok.com/'}
+    ],
+    links:{ signup:'https://grok.com/', download:'https://apps.apple.com/app/grok/id6670324846', site:'https://x.ai/' },
+    alt:['Grok 4.7 (xhigh) — 更高推理档，AA-Briefcase 1638','Grok 5 — 截至 10-29 未发布'],
+    basis:'AA v5 第 33（35.0）、TB4.0 第 59（25.8%）；Grok 5 跳票，本轮只更新了产品（Grok Bot）没有新基座。',
+    tags:['实时信息','推理','API'],
+    sources:[['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['Grok Bot 报道','https://www.36kr.com/p/4017776872312966']]
+  },
+  {
+    id:'bytedance', cn:'字节跳动', en:'ByteDance · Doubao', camp:'cn', tier:2, tierRank:2,
+    domain:'doubao.com', icon:'https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/chat/favicon-doubao.png', color:['#3370ff','#93c5fd'], mark:'豆',
+    tagline:'豆包大模型 + 火山引擎，C 端与 B 端双轮',
+    model:{ name:'Doubao-Seed-2.1-Pro', date:'2026-09', desc:'主打 Coding 与 Agent 长程任务交付的旗舰，多模态与性价比见长。',
+      stats:[['OpenCompass 26-07','80.5 · 第 6'],['SuperCLUE','65.94 · 第 9'],['科学推理','77.19 · 该表最高']] },
+    agents:[
+      {type:'coding', name:'Trae', form:'AI IDE', desc:'AI 原生 IDE，Agent 可直接读仓库、写代码、跑终端。', url:'https://www.trae.ai/'},
+      {type:'office', name:'扣子 Coze', form:'网页 / 桌面', desc:'内置常驻 Agent 的办公工作台，自带云电脑、云手机与办公三件套。', url:'https://www.coze.cn/'}
+    ],
+    links:{ signup:'https://www.doubao.com/chat/', download:'https://www.doubao.com/download', site:'https://www.doubao.com/' },
+    alt:['Doubao-Seed-2.0-Pro — 多模态版本','Seedance 2.5 — 视频生成模型（非语言模型）'],
+    basis:'司南 26-07 期第 6（80.5）紧咬 Qwen，知识维度 91.4 很强；SuperCLUE 综合第 9，但未进 AA v5 前 60。',
+    tags:['多模态','内容生态','性价比'],
+    sources:[['豆包官网','https://www.doubao.com/'],['扣子官方文档','https://docs.coze.cn/cozespace_start_use.md'],['OpenCompass 司南','https://rank.opencompass.org.cn/leaderboard-llm']]
+  },
+  {
+    id:'minimax', cn:'MiniMax', en:'MiniMax', camp:'cn', tier:2, tierRank:3,
+    domain:'minimax.cn', color:['#f97316','#fdba74'], mark:'MM',
+    tagline:'多模态与 Agent 见长，走量很快的开源模型',
+    model:{ name:'MiniMax M3.1 Flash', date:'2026-10', desc:'又快又便宜的开源 Agent 模型，编程与电脑操作能力突出。',
+      stats:[['OpenRouter 周用量','13.7 万亿 · 第 3'],['AA 智力指数 v5','28.9 · 第 50'],['成本','较前代降约 70%']] },
+    agents:[
+      {type:'coding', name:'MiniMax Code', form:'桌面端 / 云端', desc:'专为 M3 系列训练的通用 Agent 工作台，可跑长程编程与电脑操作。', url:'https://agent.minimax.cn/'},
+      {type:'office', name:'MiniMax Code（办公）', form:'桌面端', desc:'把自然语言需求直接做成 PPT / Excel / Word / PDF 等交付物。', url:'https://agent.minimax.cn/'}
+    ],
+    links:{ signup:'https://www.minimax.cn/login', download:'https://agent.minimax.cn/download', site:'https://www.minimax.cn/' },
+    alt:['MiniMax M3 — 旗舰底座，1M 上下文 + 原生多模态','MiniMax H3 — 视频生成模型（非语言模型）'],
+    basis:'M3.1 Flash 在 OpenRouter 周榜第 3（13.7 万亿）、AA v5 28.9 第 50；走量路线跑得快，智力仍居中游。',
+    tags:['编程','性价比','多模态'],
+    sources:[['M3.1 Flash 官方博客','https://www.minimax.cn/blog/minimax-m31f'],['OpenRouter 报道','https://eu.36kr.com/en/p/4042510353257347']]
+  },
+  {
+    id:'mistral', cn:'Mistral AI', en:'Mistral AI', camp:'intl', tier:2, tierRank:4,
+    domain:'mistral.ai', color:['#fa520f','#ffb37a'], mark:'Mi',
+    tagline:'欧洲最强独立模型公司，主打开源权重与企业部署',
+    model:{ name:'Mistral Large 4', date:'2026-10', desc:'代号「Le Chonk」的万亿参数开源旗舰，主打主权可控与网络防御。',
+      stats:[['AA 智力指数 v5','25.3 · 第 55'],['Terminal-Bench 4.0','41% · 官方口径'],['权重','2026-10-29 开源']] },
+    agents:[
+      {type:'coding', name:'Mistral Vibe / Devstral 2', form:'CLI / 企业 IDE', desc:'在终端里跑的开源编程智能体，配套 123B 的 Devstral 2 专用编程模型。', url:'https://mistral.ai/'},
+      {type:'office', name:'Le Chat', form:'网页 / App', desc:'面向普通用户与企业的对话式办公助手，可在欧洲境内私有化部署。', url:'https://chat.mistral.ai/'}
+    ],
+    links:{ signup:'https://console.mistral.ai/', download:'https://mistral.ai/download', site:'https://mistral.ai/' },
+    alt:['Devstral 2 — 123B 编程专用模型，可本地跑','Devstral Small 2 — 24B 轻量版'],
+    basis:'Mistral Large 4（10-06 预览、10-29 开源权重）AA v5 第 55（25.3）；官方称其编程智能体指数为开源模型第一、每任务少用 47% token，但整体离前沿约 30 分。',
+    tags:['开源权重','欧洲','企业服务'],
+    sources:[['Mistral AI 官网','https://mistral.ai/'],['AA 智力指数 v5','https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5'],['ZDNET 报道','https://www.zdnet.com/innovation/mistral-large-4-weights-release/']]
+  },
+  {
+    id:'tencent', cn:'腾讯', en:'Tencent · Hunyuan', camp:'cn', tier:2, tierRank:5,
+    domain:'tencent.com', color:['#0052d9','#7dd3fc'], mark:'腾',
+    tagline:'混元大模型 + 微信生态，办公智能体矩阵完整',
+    model:{ name:'混元 Hy4', date:'2026-10', desc:'7700 亿参数开源旗舰，100 万上下文，首次集成视觉理解。',
+      stats:[['SuperCLUE 子榜','终端编程第 4 · 55.56'],['OpenRouter','Hy4 Preview 前十'],['参数规模','7700 亿 · 激活 490 亿']] },
+    agents:[
+      {type:'coding', name:'CodeBuddy', form:'IDE / 插件 / CLI', desc:'腾讯云的编程智能体，与 WorkBuddy 同底座、分别覆盖开发与办公。', url:'https://www.codebuddy.cn/'},
+      {type:'office', name:'WorkBuddy', form:'桌面端', desc:'面向白领的 AI Agent 工作台，把需求交付为 PPT、Excel、报表、网页等成果。', url:'https://www.workbuddy.cn/'}
+    ],
+    links:{ signup:'https://yuanbao.tencent.com/', download:'https://yuanbao.tencent.com/download', site:'https://hunyuan.tencent.com/' },
+    alt:['混元 Hy4 Flash — 轻量版，官方称近期推出','混元 Hy3 — 前代旗舰，OpenCompass 73.6'],
+    basis:'Hy4 为 7700 亿参数开源旗舰、100 万上下文；Hy4 Preview 稳居 OpenRouter 周榜前十，SuperCLUE 终端编程子榜第 4（55.56）。',
+    tags:['开源权重','办公生态','多模态'],
+    sources:[['WorkBuddy 官方说明','https://www.workbuddy.cn/llms.txt'],['混元官网','https://hunyuan.tencent.com/'],['Hy4 发布报道','https://ai.zol.com.cn/1266/12663552.html']]
+  },
+  {
+    id:'stepfun', cn:'阶跃星辰', en:'StepFun', camp:'cn', tier:2, tierRank:6,
+    domain:'stepfun.com', color:['#14b8a6','#99f6e4'], mark:'阶',
+    tagline:'多模态与终端见长，新旗舰 Step 5 已开放权重',
+    model:{ name:'Step 5 Preview', date:'2026-09', desc:'面向真实任务的旗舰基模，支持文本/图片/视频输入与 100 万上下文；10-15 开放权重。',
+      stats:[['AA 智力指数 v5','28.5 · 第 51'],['Terminal-Bench 4.0','33.3%'],['权重','10-15 开放（Preview）']] },
+    agents:[
+      {type:'coding', name:'Step Code', form:'CLI', desc:'终端编程智能体，可读写代码、执行命令、编排多个 subagent。', url:'https://platform.stepfun.com/docs/zh/step-code/overview'},
+      {type:'office', name:'跃问', form:'网页 / App', desc:'消费端多模态助手，支持对话、学习与文档处理。', url:'https://chat.stepfun.com/'}
+    ],
+    links:{ signup:'https://chat.stepfun.com/', download:'https://chat.stepfun.com/download', site:'https://www.stepfun.com/' },
+    alt:['Step 3.7 Flash — 官方模型列表在列','Step-3.5 Flash — 196B，学术榜第 4'],
+    basis:'Step 5 Preview AA v5 28.5 第 51、TB4.0 33.3%、在 Claude Code harness 内 43 分；有单点亮点，但未进任何全球前十。',
+    tags:['多模态','长上下文','端侧'],
+    sources:[['Step 5 Preview 官方文档','https://platform.stepfun.com/docs/zh/guides/models/step-5-preview'],['Step Code 官方文档','https://platform.stepfun.com/docs/zh/step-code/overview']]
+  },
+  {
+    id:'amazon', cn:'亚马逊', en:'Amazon · Nova', camp:'intl', tier:2, tierRank:7,
+    domain:'aws.amazon.com', color:['#ff9900','#ffd28a'], mark:'a',
+    tagline:'云巨头，自研 Nova 模型 + 企业智能体平台',
+    model:{ name:'Amazon Nova 2.0 Pro Preview', date:'2025-12', desc:'云上自研模型家族：主打「够用、便宜、好接入」，同代 Nova 2 Lite 已 GA。',
+      stats:[['BenchLeader','53.6 · 厂商第 18'],['Nova 2 Lite','100 万上下文 · 已 GA'],['生态','Bedrock / Nova Act']] },
+    agents:[
+      {type:'coding', name:'Kiro', form:'IDE / CLI / 云端', desc:'AWS 的代理式编程入口（Kiro IDE / CLI / Web），旧 Q Developer CLI 已并入。', url:'https://kiro.dev/'},
+      {type:'office', name:'Amazon Quick', form:'网页 / 企业平台', desc:'基于企业真实业务数据回答并代办日常工作的办公 AI 助手。', url:'https://aws.amazon.com/quick/'}
+    ],
+    links:{ signup:'https://aws.amazon.com/console/', download:'https://kiro.dev/downloads/', site:'https://aws.amazon.com/ai/generative-ai/nova/' },
+    alt:['Nova 2 Lite — GA，100 万上下文，性价比主力','Nova 2 Sonic — 语音到语音模型'],
+    basis:'Nova 2.0 Pro Preview 第三方综合 53.6（厂商第 18/90），但未进 AA v5 前 60；Nova 2 Lite 已 GA（1M 上下文，内置联网与代码执行）。',
+    tags:['云生态','企业服务','多模态'],
+    sources:[['AWS Nova 官网','https://aws.amazon.com/ai/generative-ai/nova/'],['Kiro 官网','https://kiro.dev/'],['BenchLeader 厂商榜','https://www.benchleader.com/providers/amazon']]
+  },
+
+  /* ============================================================
+     第三梯队 · 特色专精（5 家）
+     ============================================================ */
+  {
+    id:'microsoft', cn:'微软', en:'Microsoft · Copilot', camp:'intl', tier:3, tierRank:1,
+    domain:'microsoft.com', color:['#00a4ef','#7dd3fc'], mark:'Ms',
+    tagline:'Copilot 生态霸主，靠平台编排补自研短板',
+    model:{ name:'MAI-Thinking-1', date:'2026-06', desc:'微软自研推理模型，主打复杂问题推理与编程；最强底座 MAI-Base-2 已完成预训练。',
+      stats:[['自研模型','MAI-Thinking-1（2026-06）'],['新底座','MAI-Base-2 · 2.8T MoE'],['平台亮点','Copilot Fusion（10-28）']] },
+    agents:[
+      {type:'coding', name:'GitHub Copilot', form:'IDE / CLI / 云端', desc:'全球装机量最大的 AI 编程助手，10-28 起用 Fusion 编排 Anthropic 与 OpenAI 模型。', url:'https://github.com/features/copilot'},
+      {type:'office', name:'Microsoft 365 Copilot / 新版 Copilot', form:'Office / 桌面 / 网页', desc:'把 Word、Excel、Teams 与常驻 Agent（Autopilot）收进一个入口。', url:'https://copilot.com/'}
+    ],
+    links:{ signup:'https://copilot.com/', download:'https://copilot.com/download', site:'https://www.microsoft.com/en-us/ai' },
+    alt:['MAI-Base-2 — 2.8T MoE 底座（10-15 预训练完成，未发布）','MAI-Code-1.1-Flash — 内置 GitHub Copilot 的编程小模型'],
+    basis:'自研模型仍在追赶（Phi-4 39.5、MAI 系列未进 AA v5 前 60）；但平台侧 Copilot Fusion 在编程智能体榜上比 Opus 5.5 只低 2 分、成本约一半。',
+    tags:['办公生态','企业服务','编程'],
+    sources:[['Microsoft AI 模型页','https://microsoft.ai/models/'],['AA Copilot Fusion 公告','https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost'],['Copilot','https://copilot.com/']]
+  },
+  {
+    id:'cohere', cn:'Cohere', en:'Cohere', camp:'intl', tier:3, tierRank:2,
+    domain:'cohere.com', color:['#ff7759','#ffb4a2'], mark:'C',
+    tagline:'面向企业的检索与私有化智能体平台',
+    model:{ name:'Command A+', date:'2026-05', desc:'可私有化部署的企业多语旗舰：25B 激活 / 218B 总参数，支持视觉、推理与 Agent 任务。',
+      stats:[['规格','25B 激活 / 218B 总参'],['语言','48 种 · Apache 2.0'],['上下文','128K 输入 / 64K 输出']] },
+    agents:[
+      {type:'coding', name:'North Mini Code', form:'企业平台内模型', desc:'不卖独立编程工具，而是把「会写代码的模型」嵌进企业私有化平台。', url:'https://cohere.com/north'},
+      {type:'office', name:'Cohere North 2', form:'企业平台', desc:'企业级 Agent 平台：可复用 Agent、记忆与技能，支持云 / 本地 / 气隙部署。', url:'https://cohere.com/north'}
+    ],
+    links:{ signup:'https://dashboard.cohere.com/welcome/login', download:'', site:'https://cohere.com/' },
+    alt:['Command A — 上一代旗舰，256K 上下文','Embed 5 / Rerank 5 — 检索类模型'],
+    basis:'Command A+ 走企业私有化与多语路线（25B 激活 / 218B 总参、48 语、Apache 2.0）；North Mini Code 第三方综合 46.5（厂商第 29/90），AA v5 前 60 无条目。',
+    tags:['企业服务','检索','私有化'],
+    sources:[['Command A+ 官方 Release Notes','https://docs.cohere.com/v2/changelog/command-a-plus-05-2026'],['North 2 发布','https://cohere.com/blog/introducing-north-2'],['BenchLeader 厂商榜','https://www.benchleader.com/providers/cohere']]
+  },
+  {
+    id:'perplexity', cn:'Perplexity', en:'Perplexity', camp:'intl', tier:3, tierRank:3,
+    domain:'perplexity.ai', color:['#20808d','#5eead4'], mark:'P',
+    tagline:'AI 搜索起家，做浏览器与云端数字员工',
+    model:{ name:'Sonar（检索增强 API）', date:'2026', desc:'不自研前沿基座模型，走「检索增强 + 智能体产品」路线，回答路由第三方模型。',
+      stats:[['自研基座','无前沿模型'],['产品','Computer 数字员工'],['连接器','400+']] },
+    agents:[
+      {type:'coding', name:'Perplexity Computer', form:'云端沙箱', desc:'在 Linux 沙箱里写并执行代码、生成文档图表，还能把网站直接部署上线。', url:'https://www.perplexity.ai/'},
+      {type:'office', name:'Perplexity Computer / Comet', form:'云端 / 浏览器', desc:'把查资料、做表、写文档、发邮件、跟任务串成一个云端数字员工。', url:'https://www.perplexity.ai/'}
+    ],
+    links:{ signup:'https://www.perplexity.ai/', download:'https://www.perplexity.ai/download', site:'https://www.perplexity.ai/' },
+    alt:['Sonar Pro / Sonar Reasoning Pro — 检索增强 API','Comet — AI 浏览器（可代用户操作网页）'],
+    basis:'没有自研基座进入 AA v5 / LMArena / 厂商榜；它是应用与检索层公司，在「模型智力梯队」里单列。',
+    tags:['AI 搜索','研究','浏览器'],
+    sources:[['Perplexity API 平台文档','https://docs.perplexity.ai/docs/getting-started/overview'],['Computer 文档','https://docs.perplexity.ai/docs/getting-started/integrations/computer-mcp-server']]
+  },
+  {
+    id:'baidu', cn:'百度', en:'Baidu · ERNIE', camp:'cn', tier:3, tierRank:4,
+    domain:'baidu.com', color:['#2932e1','#a5b4fc'], mark:'文',
+    tagline:'文心大模型，中文写作与医疗等垂类见长',
+    model:{ name:'文心 5.1（ERNIE 5.1）', date:'2026-05', desc:'中文知识与写作能力突出，重心转向办公智能体与行业落地。',
+      stats:[['LMArena Coding','第 54 · 1512'],['SuperCLUE','54.56 · 第 15'],['垂类亮点','灵医 MedBench 第 1']] },
+    agents:[
+      {type:'coding', name:'文心快码 Comate', form:'IDE 插件 / 企业版', desc:'百度商用 AI 编程助手，2026-09 起并入通用智能体平台「百度搭子」。', url:'https://comate.baidu.com/'},
+      {type:'office', name:'百度搭子 DuMate', form:'网页 / 桌面', desc:'通用智能体平台，支持 ComputerUse / MobileUse 与 30+ 岗位套件。', url:'https://dumate.baidu.com/'}
+    ],
+    links:{ signup:'https://wenxin.baidu.com/', download:'https://yiyan.baidu.com/download', site:'https://ernie.baidu.com/' },
+    alt:['文心 5.0 — 上一代旗舰','秒哒 MiaoDa — 自然语言生成应用'],
+    basis:'ERNIE 5.1 在 LMArena Coding 第 54、SuperCLUE 通用榜第 15（54.56），厂商榜 0 个入榜模型；亮点在医疗垂类（MedBench 灵医第 1）。',
+    tags:['中文写作','产业落地','医疗'],
+    sources:[['文心官网','https://ernie.baidu.com/'],['SuperCLUE','https://www.superclueai.com'],['MedBench','https://medbench.opencompass.org.cn/']]
+  },
+  {
+    id:'iflytek', cn:'科大讯飞', en:'iFlytek · Spark', camp:'cn', tier:3, tierRank:5,
+    domain:'iflytek.com', color:['#2b7cff','#93c5fd'], mark:'讯',
+    tagline:'语音与教育起家，全国产算力路线',
+    model:{ name:'讯飞星火 X2.6', date:'2026-10', desc:'全国产算力训练的端云一体大模型，主打语音、教育与行业落地。',
+      stats:[['路线','全国产算力 · 端云一体'],['端侧','X2.6-4B 覆盖 41.9% 任务'],['特色','语音 / 教育 / 办公硬件']] },
+    agents:[
+      {type:'coding', name:'iFlyCode', form:'IDE 插件 / 企业版', desc:'面向企业研发提效的编程助手，支持私有化部署。', url:'https://sparklegion.iflytek.com/inner1.html'},
+      {type:'office', name:'讯飞星帆 WinWork', form:'企业平台', desc:'数字员工平台，已上线 80+ 类岗位数字员工，支持私有化与审计。', url:'https://winwork.iflytek.com/'}
+    ],
+    links:{ signup:'https://xinghuo.xfyun.cn/', download:'https://xinghuo.xfyun.cn/download', site:'https://www.iflytek.com/' },
+    alt:['星火 X2.6-4B — 端侧小模型','SparkAudio 1.0 — 语音基座'],
+    basis:'星火 X2.6 有发布，但 AA / LMArena / OpenRouter / 司南 / 厂商榜均无条目，名次未核实；属区域与行业专精型。',
+    tags:['语音','教育','国产化'],
+    sources:[['讯飞星火官网','https://xinghuo.xfyun.cn/'],['星火 X2.6 报道','https://www.stdaily.com/web/gdxw/2026-10/23/content_601627.html'],['星火星帆 WinWork','https://winwork.iflytek.com/']]
+  }
+];
+
+/* ============================================================
+   一句话标签、梯队信息
+   ============================================================ */
+const SHORT = {
+  google:'三榜第一，多模态强',
+  anthropic:'编程智能体全球第一',
+  openai:'综合最均衡的通用模型',
+  meta:'盲测人气全球第 2',
+  moonshot:'长程编程最强开源',
+  alibaba:'中文与多模态双榜领先',
+  deepseek:'用量全球第一，性价比高',
+  zhipu:'开源第一，智能体强',
+  xai:'实时信息，响应快',
+  bytedance:'多模态与内容生态',
+  minimax:'性价比与视频生成',
+  mistral:'欧洲最强开源',
+  tencent:'办公智能体最全',
+  stepfun:'多模态与端侧',
+  amazon:'云 + 企业智能体',
+  microsoft:'Copilot 办公生态',
+  cohere:'企业私有化',
+  perplexity:'AI 搜索与数字员工',
+  baidu:'中文写作与医疗',
+  iflytek:'语音、教育与办公硬件'
+};
+const TIER = {
+  1:{ name:'前沿领跑', desc:'全球前十，或某类能力全球第一档' },
+  2:{ name:'主力竞争', desc:'有竞争力，但不在最前沿' },
+  3:{ name:'特色专精', desc:'垂直场景，或模型代际落后' }
+};
+const CAMP = { cn:{ flag:'🇨🇳', label:'国内' }, intl:{ flag:'🌍', label:'海外' } };
+const state = { camp:'all' };
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const altName = (s) => String(s).split(' — ')[0];
+
+/* 全局排名：先梯队、再梯队内序号 */
+const RANKED = DATA.map(c => ({ c, tier:c.tier, rank:c.tierRank }))
+  .sort((a,b) => a.tier - b.tier || a.rank - b.rank)
+  .map((x,i) => ({ ...x.c, _rank: i + 1 }));
+
+/* Logo：官方 favicon / 指定图标 → Google 备用 → 文字图标 */
+function logoHTML(c){
+  const primary = c.icon || ('https://' + c.domain + '/favicon.ico');
+  return '<span class="logo" aria-hidden="true">' +
+    '<span class="logo-fb">' + esc(c.mark) + '</span>' +
+    '<img src="' + primary + '" alt="" loading="lazy" referrerpolicy="no-referrer" ' +
+      'onerror="if(!this.dataset.f){this.dataset.f=1;this.src=\'https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128\';}else{this.remove();}">' +
+  '</span>';
+}
+const MODELS = {
+  google:['Gemini 4 Carbon','Gemini 4 Argon','Gemini 3.8 Flash'],
+  anthropic:['Claude Opus 5.5','Claude Sonnet 5.5','Claude Haiku 5.5'],
+  openai:['GPT-6 Astra','GPT-6.1 Sol','GPT-6.1 Terra'],
+  meta:['Muse Wonder','Muse Wonder Full','Muse Spark Open'],
+  moonshot:['Kimi K3.1 Pro','K3.1 Pro Highspeed','Kimi K3'],
+  alibaba:['Qwen3.8-Max','Qwen3.8-Flash-Next','Qwen3.5-397B'],
+  deepseek:['DeepSeek V4.1 Flash','DeepSeek V4 Pro'],
+  zhipu:['GLM-5.3','GLM-5.3-Flash','GLM-5.2'],
+  xai:['Grok 4.7','Grok 4.6'],
+  bytedance:['Doubao-Seed-2.1-Pro','Doubao-Seed-2.0-Pro','Doubao-Seed-1.8'],
+  minimax:['MiniMax M3.1 Flash','MiniMax M3'],
+  mistral:['Mistral Large 4','Devstral 2','Devstral Small 2'],
+  tencent:['混元 Hy4','混元 Hy3'],
+  stepfun:['Step 5 Preview','Step 3.7 Flash','Step-3.5 Flash'],
+  amazon:['Nova 2.0 Pro Preview','Nova 2 Lite','Nova 2 Sonic'],
+  microsoft:['MAI-Thinking-1','MAI-Base-2','MAI-Code-1.1-Flash'],
+  cohere:['Command A+','Command A','North Mini Code'],
+  perplexity:['Sonar','Sonar Pro','Sonar Reasoning Pro'],
+  baidu:['文心 5.1','文心 5.0'],
+  iflytek:['讯飞星火 X2.6','星火 X2.6-4B','SparkAudio 1.0']
+};
+function modelsOf(c){
+  const list = MODELS[c.id] || [c.model.name].concat((c.alt || []).map(altName));
+  return list.filter(Boolean).slice(0, 3);
+}
+const AGENT_NAME = {
+  'microsoft:office':'M365 Copilot',
+  'deepseek:office':'DeepSeek Harness',
+  'perplexity:office':'Computer / Comet'
+};
+function agentHTML(a, c){
+  const label = a.type === 'coding' ? '编程' : '办公';
+  const cls = a.type === 'coding' ? 'coding' : 'office';
+  const display = AGENT_NAME[c.id + ':' + a.type] || a.name;
+  const inner = '<span class="tag ' + cls + '">' + label + '</span>' +
+    '<span class="an" title="' + esc(a.name) + '">' + esc(display) + '</span>' +
+    (a.url ? '<span class="ar">↗</span>' : '');
+  if (a.url) {
+    return '<a class="agent ' + cls + '" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(a.name + ' · ' + a.form) + '">' + inner + '</a>';
+  }
+  return '<span class="agent ' + cls + ' no-link" title="暂无独立产品">' + inner + '</span>';
+}
+function rowHTML(c){
+  const agents = c.agents.slice(0,2).map(a => agentHTML(a, c)).join('');
+  const signup = c.links.signup ? '<a class="btn btn-primary btn-sm" href="' + esc(c.links.signup) + '" target="_blank" rel="noopener noreferrer">注册体验</a>' : '';
+  const download = c.links.download ? '<a class="btn btn-ghost btn-sm" href="' + esc(c.links.download) + '" target="_blank" rel="noopener noreferrer">下载 App</a>' : '';
+  const site = c.links.site ? '<a class="link-site" href="' + esc(c.links.site) + '" target="_blank" rel="noopener noreferrer">官网 ↗</a>' : '';
+  return '<article class="rank-row reveal" id="co-' + c.id + '" data-camp="' + c.camp + '" data-tier="' + c.tier + '">' +
+    '<div class="rank-no">' + c._rank + '</div>' +
+    '<div class="rank-co">' +
+      '<div class="co-head">' +
+        logoHTML(c) +
+        '<div>' +
+          '<div class="co-title"><span class="flag" aria-hidden="true">' + CAMP[c.camp].flag + '</span>' +
+            '<h3>' + esc(c.cn) + '</h3><span class="badge t' + c.tier + '">T' + c.tier + ' ' + TIER[c.tier].name + '</span></div>' +
+          '<p class="co-short">' + esc(SHORT[c.id] || c.tagline) + '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div class="models"><span class="m-label">主力模型</span>' + modelsOf(c).map(m => '<span class="m-name">' + esc(m) + '</span>').join('') + '</div>' +
+    '</div>' +
+    '<div class="agents">' + agents + '</div>' +
+    '<div class="links">' + signup + download + site + '</div>' +
+  '</article>';
+}
+function renderRanking(){
+  const list = $('#rankList');
+  const data = RANKED.filter(c => state.camp === 'all' || c.camp === state.camp);
+  let html = '';
+  [1,2,3].forEach(t => {
+    const group = data.filter(c => c.tier === t);
+    if (!group.length) return;
+    html += '<div class="tier-band t' + t + '" data-tier="' + t + '">' +
+      '<span class="tn">T' + t + ' · ' + TIER[t].name + '</span>' +
+      '<span class="td">' + TIER[t].desc + '</span>' +
+      '<span class="tc">' + group.length + ' 家</span>' +
+    '</div>';
+    html += group.map(rowHTML).join('');
+  });
+  list.innerHTML = html;
+  observeReveal();
+}
+
+/* ---------- 第 3 步：按需求挑 ---------- */
+function pickItem(name, company, url){
+  const tag = url ? ' href="' + esc(url) + '" target="_blank" rel="noopener noreferrer"' : '';
+  return '<a class="pick-item"' + tag + '><b>' + esc(name) + '</b><span>' + esc(company) + (url ? ' ↗' : '') + '</span></a>';
+}
+function renderPicks(){
+  const byId = {}; RANKED.forEach(c => byId[c.id] = c);
+  const coding = [
+    ['Claude Code','Anthropic', byId.anthropic],
+    ['Codex','OpenAI', byId.openai],
+    ['Kimi Code','月之暗面', byId.moonshot],
+    ['Qoder','阿里巴巴', byId.alibaba],
+    ['Trae','字节跳动', byId.bytedance],
+    ['CodeBuddy','腾讯', byId.tencent]
+  ];
+  const office = [
+    ['WorkBuddy','腾讯', byId.tencent],
+    ['Kimi Work','月之暗面', byId.moonshot],
+    ['QwenWork','阿里巴巴', byId.alibaba],
+    ['ChatGPT Dots','OpenAI', byId.openai],
+    ['Claude Cowork','Anthropic', byId.anthropic],
+    ['M365 Copilot','微软', byId.microsoft]
+  ];
+  const open = [
+    ['DeepSeek V4.1','深度求索', byId.deepseek],
+    ['Qwen3.8','阿里巴巴', byId.alibaba],
+    ['GLM-5.3','智谱 AI', byId.zhipu],
+    ['Kimi K3.1','月之暗面', byId.moonshot],
+    ['Mistral Large 4','Mistral AI', byId.mistral],
+    ['MiniMax M3.1','MiniMax', byId.minimax]
+  ];
+  const agentURL = (c, type) => {
+    const a = c.agents.find(x => x.type === type);
+    return a && a.url ? a.url : '';
+  };
+  $('#pickCoding').innerHTML = coding.map(([n,co,c]) => pickItem(n, co, agentURL(c,'coding'))).join('');
+  $('#pickOffice').innerHTML = office.map(([n,co,c]) => pickItem(n, co, agentURL(c,'office'))).join('');
+  $('#pickOpen').innerHTML = open.map(([n,co,c]) => pickItem(n, co, c.links.site || '')).join('');
+}
+
+/* ---------- 统计数字 ---------- */
+function renderStats(){
+  const agents = DATA.reduce((n,c) => n + c.agents.length, 0);
+  const map = { companies: DATA.length, tiers: 3, models: DATA.length, agents };
+  $$('[data-stat]').forEach(el => { const v = map[el.dataset.stat]; if (v != null) el.textContent = v; });
+}
+
+/* ---------- 交互 ---------- */
+function bind(){
+  $$('.seg button').forEach(btn => btn.addEventListener('click', () => {
+    state.camp = btn.dataset.camp;
+    $$('.seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.camp === state.camp)));
+    renderRanking();
+  }));
+  // 主题
+  const btn = $('#themeBtn');
+  const saved = localStorage.getItem('ai-map-theme');
+  if (saved === 'dark') document.documentElement.dataset.theme = 'dark';
+  const syncTheme = () => { btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾'; };
+  syncTheme();
+  btn.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('ai-map-theme', next);
+    syncTheme();
+  });
+  // 回到顶部
+  const top = $('#toTop');
+  const readbar = $('#readbar');
+  addEventListener('scroll', () => {
+    top.classList.toggle('show', scrollY > 700);
+    const max = document.documentElement.scrollHeight - innerHeight;
+    if (readbar) readbar.style.width = (max > 0 ? Math.min(100, scrollY / max * 100) : 0) + '%';
+  }, { passive:true });
+  top.addEventListener('click', () => scrollTo({ top:0, behavior:'smooth' }));
+}
+
+/* ---------- 入场动效 ---------- */
+let io = null;
+function observeReveal(){
+  if (!('IntersectionObserver' in window)) { $$('.reveal').forEach(el => el.classList.add('in')); return; }
+  if (!io){
+    io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin:'0px 0px -6% 0px', threshold:.04 });
+  }
+  $$('.reveal:not(.in)').forEach(el => io.observe(el));
+}
+
+/* ---------- 初始化 ---------- */
+renderStats();
+renderRanking();
+renderPicks();
+bind();
+observeReveal();
+</script>
+</body>
+</html>
