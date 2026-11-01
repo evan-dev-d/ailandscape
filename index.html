@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>AI 入门课：看懂 20 家 AI 公司与它们的智能体（2026 年 10 月）</title>
-<meta name="description" content="面向零基础读者的 AI 科普教程：用 4 个词入门，按主力模型智力水平看完 20 家国内外 AI 公司排行，直接找到能写代码、能做办公的智能体，并一键注册或下载。数据快照 2026 年 10 月。">
+<meta name="description" content="面向零基础读者的 AI 科普教程：用 5 个词入门，按主力模型智力水平看完 20 家国内外 AI 公司排行，直接找到能写代码、能做办公的智能体，并一键注册或下载。数据快照 2026 年 10 月。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 入门课：看懂 20 家 AI 公司与它们的智能体">
@@ -200,7 +200,7 @@ img{max-width:100%}
 .step-head p{margin-top:8px;font-size:14px;color:var(--muted);max-width:680px}
 
 /* ---------- 第 1 步：概念 ---------- */
-.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.terms{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .term{
   background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;
   box-shadow:var(--shadow);transition:.2s;
@@ -214,6 +214,35 @@ img{max-width:100%}
 .term h3 em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 .term p{margin-top:6px;font-size:12.5px;line-height:1.65;color:var(--ink-2)}
 .term p b{color:var(--ink);font-weight:700}
+/* ---------- 关系图 ---------- */
+.flowmap-wrap{margin-top:18px;padding:20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,var(--brand-soft),var(--card) 72%);box-shadow:var(--shadow)}
+.fm-title{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--brand-ink);margin-bottom:14px}
+.fm-title::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--brand)}
+.flowmap{display:flex;align-items:stretch}
+.fm-node{flex:1 1 0;min-width:0;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--line-2);border-radius:14px;padding:14px 10px;text-align:center;box-shadow:var(--shadow)}
+.fm-node.n-company{border-top-color:var(--brand)}
+.fm-node.n-model{border-top-color:var(--t2)}
+.fm-node.n-agent{border-top-color:var(--t3)}
+.fm-node.n-task{border-top-color:var(--ok)}
+.fm-ico{font-size:20px;line-height:1}
+.fm-node b{display:block;font-size:13.5px;font-weight:800;margin-top:6px;color:var(--ink)}
+.fm-node .role{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.5}
+.fm-node em{display:block;font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--ink-2);margin-top:7px;line-height:1.5}
+.fm-arrow{flex:0 0 88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--muted)}
+.fm-arrow span{font-size:9.5px;font-weight:700;color:var(--brand-ink);background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent);padding:1px 6px;border-radius:5px;white-space:nowrap;text-align:center}
+.fm-arrow i{font-style:normal;font-size:18px;font-weight:700;color:var(--line-2);line-height:1}
+.token-callout{margin-top:16px;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:12px;background:var(--t1-soft);border:1px solid var(--t1-line)}
+.token-callout .tk{flex:0 0 auto;font-size:11px;font-weight:900;color:var(--t1);background:var(--card);border:1px solid var(--t1-line);padding:2px 8px;border-radius:6px;white-space:nowrap}
+.token-callout p{font-size:12px;line-height:1.65;color:var(--ink-2)}
+.token-callout b{color:var(--ink)}
+.fm-caption{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.7}
+@media (max-width:900px){
+  .flowmap{flex-direction:column}
+  .fm-node{width:100%}
+  .fm-arrow{flex:0 0 auto;padding:5px 0}
+  .fm-arrow i{transform:rotate(90deg)}
+  .fm-arrow span{font-size:10px}
+}
 
 /* ---------- 第 2 步：排行 ---------- */
 .rank-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}
@@ -366,7 +395,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .agents{grid-column:2;flex-direction:row;flex-wrap:wrap}
   .agent{flex:1 1 220px}
   .links{grid-column:2;justify-content:flex-start}
-  .terms{grid-template-columns:repeat(2,1fr)}
+  .terms{grid-template-columns:repeat(3,1fr)}
   .picks{grid-template-columns:1fr}
   .tips{grid-template-columns:1fr}
 }
@@ -454,13 +483,13 @@ html.js .reveal.in{opacity:1;transform:none}
         <div class="syl-learn">
           <div class="lt">学完你会</div>
           <ul>
-            <li>分清大模型、智能体、编程 / 办公智能体</li>
+            <li>分清大模型、Token、智能体、编程 / 办公智能体</li>
             <li>知道 20 家公司各自强在哪</li>
             <li>找到适合自己的工具并完成注册</li>
           </ul>
         </div>
         <div class="syl-list">
-          <a class="syl-item" href="#basics"><span class="syl-n">01</span><span class="syl-t"><b>认识 4 个词</b><span>大模型 / 智能体 / 两类智能体</span></span><span class="syl-d">2 分钟</span><span class="syl-go">→</span></a>
+          <a class="syl-item" href="#basics"><span class="syl-n">01</span><span class="syl-t"><b>认识 5 个词</b><span>大模型 / Token / 智能体 / 两类智能体</span></span><span class="syl-d">2 分钟</span><span class="syl-go">→</span></a>
           <a class="syl-item" href="#ranking"><span class="syl-n">02</span><span class="syl-t"><b>看公司排行</b><span>20 家公司，谁强在哪</span></span><span class="syl-d">5 分钟</span><span class="syl-go">→</span></a>
           <a class="syl-item" href="#choose"><span class="syl-n">03</span><span class="syl-t"><b>按需求挑工具</b><span>写代码 / 办公 / 开源部署</span></span><span class="syl-d">2 分钟</span><span class="syl-go">→</span></a>
           <a class="syl-item" href="#start"><span class="syl-n">04</span><span class="syl-t"><b>注册与下载</b><span>3 条上手小提示</span></span><span class="syl-d">1 分钟</span><span class="syl-go">→</span></a>
@@ -476,8 +505,8 @@ html.js .reveal.in{opacity:1;transform:none}
         <div class="step-no">01</div>
         <div>
           <div class="step-meta"><span class="step-kicker">第 1 节 · 基础概念</span><span class="step-time">约 2 分钟</span></div>
-          <h2>先认识 4 个词</h2>
-          <p>不懂 AI 也没关系。这四个词是整张地图的图例，看懂它们，后面的排行就能读懂。</p>
+          <h2>先认识 5 个词</h2>
+          <p>不懂 AI 也没关系。这五个词是整张地图的图例；先记住它们，再看下面这张关系图。</p>
         </div>
       </div>
       <div class="terms">
@@ -485,6 +514,11 @@ html.js .reveal.in{opacity:1;transform:none}
           <div class="ico">🧠</div>
           <h3>大模型 <em>LLM</em></h3>
           <p>AI 的<b>大脑</b>：读过海量文字，会写、会算、能看图。它是发动机，但需要产品才能用起来。</p>
+        </div>
+        <div class="term reveal">
+          <div class="ico">🪙</div>
+          <h3>Token <em>词元</em></h3>
+          <p>AI 的<b>计费单位</b>：文字会被切成小块，一块约 0.5–1 个汉字；你输入的、它输出的都按 Token 算。</p>
         </div>
         <div class="term reveal">
           <div class="ico">🤖</div>
@@ -501,6 +535,43 @@ html.js .reveal.in{opacity:1;transform:none}
           <h3>办公智能体</h3>
           <p>替你做<b>资料、表格、PPT、邮件</b>。代表：WorkBuddy、Kimi Work、M365 Copilot。</p>
         </div>
+      </div>
+      <div class="flowmap-wrap reveal">
+        <div class="fm-title">一张图看懂：它们怎么串起来</div>
+        <div class="flowmap">
+          <div class="fm-node n-company">
+            <div class="fm-ico">🏭</div>
+            <b>模型公司</b>
+            <span class="role">造车厂：训练并出售模型</span>
+            <em>OpenAI / 阿里 / 月之暗面</em>
+          </div>
+          <div class="fm-arrow"><span>训练</span><i>→</i></div>
+          <div class="fm-node n-model">
+            <div class="fm-ico">🧠</div>
+            <b>大模型</b>
+            <span class="role">发动机：AI 的大脑</span>
+            <em>GPT-6 / Qwen3.8 / Kimi K3.1</em>
+          </div>
+          <div class="fm-arrow"><span>调用 · 消耗 Token</span><i>→</i></div>
+          <div class="fm-node n-agent">
+            <div class="fm-ico">🤖</div>
+            <b>智能体</b>
+            <span class="role">整车：大脑 + 手脚</span>
+            <em>Claude Code / WorkBuddy</em>
+          </div>
+          <div class="fm-arrow"><span>替你干活</span><i>→</i></div>
+          <div class="fm-node n-task">
+            <div class="fm-ico">🎯</div>
+            <b>你的任务</b>
+            <span class="role">目的地：写代码 / 做报表</span>
+            <em>你只需要提需求</em>
+          </div>
+        </div>
+        <div class="token-callout">
+          <span class="tk">⛽ Token</span>
+          <p>大模型读写文字的<b>最小单位</b>（约 0.5–1 个汉字）。智能体每调用一次模型，<b>输入和输出都按 Token 计费</b>。</p>
+        </div>
+        <p class="fm-caption">一句话记住：模型公司是造车厂，大模型是发动机，Token 是油耗，智能体是整车，你只要说目的地。</p>
       </div>
       <div class="next reveal"><a href="#ranking">下一节：看公司排行 →</a></div>
     </div>
