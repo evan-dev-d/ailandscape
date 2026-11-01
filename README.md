@@ -10,7 +10,7 @@
 ## 页面结构（课程式教程）
 
 - **课程封面**：左侧标题 + 学习目标与阅读时间；右侧「本课目录」（4 节 + 每节预计时间）；顶部有阅读进度条。
-1. **第 1 节 · 基础概念**：大模型 / Token / 智能体 / 编程智能体 / 办公智能体，并用一张关系图串起「模型公司 → 大模型 → Token → 智能体 → 任务」。
+1. **第 1 节 · 基础概念**：大模型 / 算力 / Token / 智能体 / 编程智能体 / 办公智能体，并用一张关系图串起「模型公司 → 大模型 ⇄ 算力 / Token → 智能体 → 任务」。
 2. **第 2 节 · 公司排行**：20 家公司按主力模型智力水平排 1–20 名（T1 8 家 / T2 7 家 / T3 5 家）。
    每行 = 排名 + Logo + 公司 + 国家队徽 + 梯队 + 一句话强项 + 3 个主力模型 + 编程/办公智能体 + 注册 / 下载 / 官网。
    支持「全部 / 🇨🇳 国内 / 🌍 海外」筛选。
@@ -60,7 +60,8 @@ ai-landscape/
 - `deploy/部署指南.md`：Netlify / Vercel / Cloudflare Pages / GitHub Pages / 阿里云 OSS / 腾讯云 COS / 局域网分享的完整步骤与检查清单。
 - `github-pages/`：**已初始化并提交的 GitHub Pages 发布仓库**（只含页面文件）。
 - `deploy/GitHub-Pages-发布步骤.md`：GitHub Pages 逐步发布说明。
-- `deploy/一键推送-GitHub.command`：双击运行的推送脚本（已预填 `evan-dev-d / ailandscape`）。
+- `deploy/一键推送-GitHub.command`：git 推送脚本（需代理，已预填 `evan-dev-d / ailandscape`）。
+- `deploy/更新-GitHub-API.command`：**API 更新脚本（无需代理，推荐）**，粘贴 PAT 即可更新线上页面。
 
 > 发布目标：<https://github.com/evan-dev-d/ailandscape>
 > ✅ 已上线：<https://evan-dev-d.github.io/ailandscape/>（2026-11-01，Pages 构建完成，直连 HTTP 200）
